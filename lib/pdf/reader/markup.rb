@@ -4,7 +4,7 @@ require "pdf/reader/markup/page_bold_italic_receiver.rb"
 
 module PDF
   class Reader::MarkupPage
-    attr_reader :fonts, :lines, :formatted_lines
+    attr_reader :lines, :formatted_lines
       
     def initialize(page)
       receiver = PageBoldItalicReceiver.new()
