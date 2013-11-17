@@ -20,9 +20,9 @@ task :test => [:spec]
 desc "Create documentation"
 Rake::RDocTask.new("doc") do |rdoc|
   rdoc.title = "pdf-reader-markup"
-  rdoc.main = 'README.md'
   rdoc.rdoc_dir = "doc"
   rdoc.rdoc_files.include('README.md')
+  rdoc.main = 'README.md'
   rdoc.rdoc_files.include('LICENSE.txt')
   rdoc.rdoc_files.include('lib/pdf/reader/*.rb')
   rdoc.rdoc_files.include('lib/pdf/reader/markup/*.rb')

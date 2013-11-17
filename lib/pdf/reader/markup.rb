@@ -2,9 +2,9 @@
 require "pdf/reader/markup/version"
 require "pdf/reader/markup/page_bold_italic_receiver.rb"
 
-module PDF # :nodoc:
-  class Reader # :nodoc:
-    class MarkupPage
+module PDF #:nodoc:all:
+  class Reader #:nodoc:
+    class MarkupPage #:doc:
       ##
       # Returns the plaintext content of the page
       attr_reader :content

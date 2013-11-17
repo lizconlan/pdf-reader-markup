@@ -3,9 +3,9 @@
 require "pdf/reader"
 require "nokogiri"
 
-module PDF # :nodoc:
-  class Reader # :nodoc:
-    class MarkupPage
+module PDF #:nodoc:all:
+  class Reader #:nodoc:
+    class MarkupPage #:doc:
       ##
       # Builds a UTF-8 plaintext string and a UTF-8 string that includes
       # simple Bold and Italic markup of all the text on a single page by 

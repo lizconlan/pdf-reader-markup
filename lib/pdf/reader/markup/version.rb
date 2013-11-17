@@ -1,7 +1,8 @@
-module PDF # :nodoc:
-  class Reader # :nodoc:
+#:stopdoc:
+module PDF
+  class Reader 
     class MarkupPage
-      VERSION = "0.0.1" # :nodoc:
+      VERSION = "0.0.1"
     end
   end
 end
