@@ -8,8 +8,8 @@ Gem::Specification.new do |spec|
   spec.version       = PDF::Reader::MarkupPage::VERSION
   spec.authors       = ["Liz Conlan"]
   spec.email         = ["lizconlan@gmail.com"]
-  spec.description   = %q{asdf}
-  spec.summary       = %q{asdf}
+  spec.description   = %q{A markup extension for the PDF::Reader library}
+  spec.summary       = %q{Adds the option to retrieve text lines marked up with bold and italic tags when parsing PDF pages with PDF::Reader}
   spec.homepage      = "https://github.com/lizconlan/pdf-reader-markup"
   spec.license       = "MIT"
 

@@ -3,10 +3,16 @@
 require "pdf/reader"
 require "nokogiri"
 
-module PDF
-  class Reader
+module PDF # :nodoc:
+  class Reader # :nodoc:
     class MarkupPage
+      ##
+      # Builds a UTF-8 plaintext string and a UTF-8 string that includes
+      # simple Bold and Italic markup of all the text on a single page by 
+      # processing all the operators in a content stream.
       class PageBoldItalicReceiver < PDF::Reader::PageTextReceiver
+        ##
+        # starting a new page
         def page=(page)
           super(page)
           @last_tag_end = ""
@@ -17,6 +23,9 @@ module PDF
           @lines = []
         end
         
+        ##
+        # Returns the value of the markup attribute - equivalent to the
+        # content attribute but with bold and italic markup
         def markup
           unless @text.empty?
             line = fix_markup("#{@text.join("").strip}#{@last_tag_end}")
@@ -35,6 +44,8 @@ module PDF
           output
         end
         
+        ##
+        # Returns the value of the content attribute
         def content
           lines = super.lines.to_a
           fixed = []
